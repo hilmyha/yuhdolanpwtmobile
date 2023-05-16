@@ -1,5 +1,16 @@
 <resources>
     <string name="app_name">YuhDolan</string>
 
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="title_home">Let’s enjoy your vacation!</string>
+    <string name="cat_home">Popular Category</string>
+    <string name="blog_home">Artikel terbaru dari kami</string>
+
+    <string name="dmy_str">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tortor vulputate enim netus ac. Lectus tristique accumsan, cras mauris est, proin nec feugiat. Sed rhoncus viverra metus pellentesque feugiat feugiat eget. Semper in donec diam aliquam nisl varius ultricies erat viverra. Id justo venenatis a in dictumst et.
+    </string>
+
 
 </resources>

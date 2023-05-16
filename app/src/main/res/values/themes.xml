@@ -7,6 +7,7 @@
         <item name="colorPrimary">@color/red_200</item>
         <item name="colorPrimaryVariant">@color/red_500</item>
         <item name="colorOnPrimary">@color/white</item>
+        <item name="android:textColorPrimary">@color/white</item>
 
         <item name="android:statusBarColor">?attr/colorPrimaryVariant</item>
     </style>
@@ -17,5 +18,13 @@
         <item name="itemTextColor">@color/bottom_nav_text</item>
         <item name="itemIconTint">@color/bottom_nav_text</item>
         <item name="android:background">@color/black</item>
+    </style>
+    <style name="BtnLogin">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_margin">24dp</item>
+        <item name="backgroundTint">@color/red_200</item>
+        <item name="textAllCaps">true</item>
     </style>
 </resources>

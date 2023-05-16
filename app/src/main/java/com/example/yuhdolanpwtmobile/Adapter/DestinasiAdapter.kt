@@ -17,7 +17,7 @@ class DestinasiAdapter: RecyclerView.Adapter<DestinasiAdapter.DestinasiViewHolde
     }
 
     override fun getItemCount(): Int {
-        return 5
+        return 3
     }
 
     override fun onBindViewHolder(holder: DestinasiViewHolder, position: Int) {

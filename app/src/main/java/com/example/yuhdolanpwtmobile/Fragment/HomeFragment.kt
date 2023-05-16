@@ -5,8 +5,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.yuhdolanpwtmobile.Adapter.ArticleAdapter
+import com.example.yuhdolanpwtmobile.Adapter.CategoryAdapter
 import com.example.yuhdolanpwtmobile.Adapter.DestinasiAdapter
 import com.example.yuhdolanpwtmobile.R
 
@@ -27,6 +30,12 @@ class HomeFragment : Fragment() {
 
     private lateinit var rvDestinasi: RecyclerView
     private lateinit var adapter: DestinasiAdapter
+
+    private lateinit var rvCategory: RecyclerView
+    private lateinit var categoryAdapter: CategoryAdapter
+
+    private lateinit var rvArticle: RecyclerView
+    private lateinit var articleAdapter: ArticleAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -52,6 +61,18 @@ class HomeFragment : Fragment() {
 
         rvDestinasi.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         rvDestinasi.adapter = adapter
+
+        rvCategory = view.findViewById(R.id.rv_category)
+        categoryAdapter = CategoryAdapter()
+
+        rvCategory.layoutManager = GridLayoutManager(activity, 3)
+        rvCategory.adapter = categoryAdapter
+
+        rvArticle = view.findViewById(R.id.rv_article)
+        articleAdapter = ArticleAdapter()
+
+        rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        rvArticle.adapter = articleAdapter
     }
     companion object {
         /**

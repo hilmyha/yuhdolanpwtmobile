@@ -5,7 +5,7 @@
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
-    android:layout_marginBottom="52dp"
+    android:layout_marginBottom="54dp"
     android:scrollbars="none"
     tools:context=".Fragment.HomeFragment">
 
@@ -18,7 +18,7 @@
             android:layout_width="300dp"
             android:layout_height="wrap_content"
             android:text="@string/title_home"
-            android:textSize="26sp"
+            android:textSize="28sp"
             android:textStyle="bold"
             android:textColor="@color/black"
             android:paddingHorizontal="24dp"
@@ -26,33 +26,48 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Latest Destination"
-            android:textSize="18sp"
+            android:text="@string/cat_home"
+            android:textSize="22sp"
             android:textStyle="normal"
             android:textColor="@color/h2"
             android:paddingHorizontal="24dp"
             android:layout_marginTop="28dp" />
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/rv_destination"
-                android:layout_marginTop="14dp"
-                android:layout_margin="12dp"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                tools:listitem="@layout/item_destinasi_card">
-
-            </androidx.recyclerview.widget.RecyclerView>
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_margin="12dp"
+            tools:listitem="@layout/item_category_card"/>
 
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="@string/cat_home"
-            android:textSize="18sp"
+            android:text="Latest Destination"
+            android:textSize="22sp"
             android:textStyle="normal"
             android:textColor="@color/h2"
             android:paddingHorizontal="24dp"
             android:layout_marginTop="28dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_destination"
+            android:layout_marginTop="14dp"
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_destinasi_card" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_article"
+            android:layout_marginTop="14dp"
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_destinasi_card" />
 
 
 

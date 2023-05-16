@@ -11,7 +11,45 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:src="@drawable/dmy_img"
+        android:foreground="@color/foreground"
         android:scaleType="centerCrop" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingVertical="12dp"
+        android:layout_gravity="bottom">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Title"
+            android:textSize="24sp"
+            android:paddingHorizontal="12dp"
+            android:textStyle="bold"
+            android:textColor="@color/white" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingHorizontal="12dp">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/ic_location"
+                android:layout_gravity="center_vertical"
+                android:layout_marginEnd="4dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Location"
+                android:textSize="14sp"
+                android:textStyle="normal"
+                android:textColor="@color/white" />
+        </LinearLayout>
+
+    </LinearLayout>
 
 
 

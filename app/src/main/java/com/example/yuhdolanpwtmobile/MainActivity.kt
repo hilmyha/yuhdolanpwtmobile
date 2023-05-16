@@ -2,6 +2,9 @@ package com.example.yuhdolanpwtmobile
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
+import android.widget.Button
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -31,6 +34,8 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_destination -> makeCurrentFragment(destinationFragment)
             }
         }
+
+
 
     }
 

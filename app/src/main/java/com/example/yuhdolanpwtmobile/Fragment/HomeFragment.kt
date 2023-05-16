@@ -1,10 +1,12 @@
 package com.example.yuhdolanpwtmobile.Fragment
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,6 +14,7 @@ import com.example.yuhdolanpwtmobile.Adapter.ArticleAdapter
 import com.example.yuhdolanpwtmobile.Adapter.CategoryAdapter
 import com.example.yuhdolanpwtmobile.Adapter.DestinasiAdapter
 import com.example.yuhdolanpwtmobile.R
+import com.example.yuhdolanpwtmobile.SinglePageActivity
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -59,21 +62,32 @@ class HomeFragment : Fragment() {
         rvDestinasi = view.findViewById(R.id.rv_destination)
         adapter = DestinasiAdapter()
 
-        rvDestinasi.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
-        rvDestinasi.adapter = adapter
-
         rvCategory = view.findViewById(R.id.rv_category)
         categoryAdapter = CategoryAdapter()
-
-        rvCategory.layoutManager = GridLayoutManager(activity, 3)
-        rvCategory.adapter = categoryAdapter
 
         rvArticle = view.findViewById(R.id.rv_article)
         articleAdapter = ArticleAdapter()
 
+        destinasiView()
+        categoryView()
+        articleView()
+    }
+
+    private fun destinasiView() {
+        rvDestinasi.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
+        rvDestinasi.adapter = adapter
+    }
+
+    private fun categoryView() {
+        rvCategory.layoutManager = GridLayoutManager(activity, 3)
+        rvCategory.adapter = categoryAdapter
+    }
+
+    private fun articleView() {
         rvArticle.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.HORIZONTAL, false)
         rvArticle.adapter = articleAdapter
     }
+
     companion object {
         /**
          * Use this factory method to create a new instance of

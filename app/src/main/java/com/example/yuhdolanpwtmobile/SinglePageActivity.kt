@@ -10,6 +10,11 @@ class SinglePageActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_single_page)
 
+        parallaxEffect()
+
+    }
+
+    fun parallaxEffect() {
         val parallaxImage = findViewById<ImageView>(R.id.parallax_image)
 
         val scrollView = findViewById<ScrollView>(R.id.scroll_view)

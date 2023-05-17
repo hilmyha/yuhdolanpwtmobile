@@ -1,5 +1,6 @@
 package com.example.yuhdolanpwtmobile
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -34,9 +35,6 @@ class MainActivity : AppCompatActivity() {
                 R.id.nav_destination -> makeCurrentFragment(destinationFragment)
             }
         }
-
-
-
     }
 
     private fun makeCurrentFragment(fragment: Fragment) {

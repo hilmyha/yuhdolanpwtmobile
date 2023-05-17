@@ -7,17 +7,20 @@
     android:orientation="vertical"
     tools:context=".MainActivity">
 
-
-
-
     <FrameLayout
         android:id="@+id/frame_navbar"
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <include
+        <com.google.android.material.bottomnavigation.BottomNavigationView
             android:id="@+id/navbar"
-            layout="@layout/bottom_navbar" />
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            style="@style/Nav_Bottom"
+            app:menu="@menu/bottom_nav">
+
+        </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     </FrameLayout>
 

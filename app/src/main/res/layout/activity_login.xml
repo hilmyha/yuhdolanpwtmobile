@@ -66,24 +66,28 @@
             app:cornerRadius="10dp">
         </Button>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Belum memiliki akun? "
-            android:layout_marginLeft="25dp">
-        </TextView>
+            android:paddingHorizontal="20dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/jump_Register"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Daftar Disini"
-            android:clickable="true"
-            android:onClick="jump_register"
-            android:layout_gravity="center"
-            android:layout_marginTop="-20dp"
-            android:layout_marginLeft="18dp">
-        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Belum memiliki akun?">
+            </TextView>
+
+            <TextView
+                android:id="@+id/jump_Register"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_200"
+                android:layout_marginLeft="4dp"
+                android:textStyle="bold"
+                android:text="Daftar Disini">
+            </TextView>
+        </LinearLayout>
 
     </LinearLayout>
 

@@ -28,6 +28,13 @@
                     android:scaleType="centerCrop"
                     android:foreground="@color/foreground" />
 
+                <ImageView
+                    android:id="@+id/back_home"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="24dp"
+                    android:src="@drawable/baseline_arrow_back_ios_24" />
+
                 <TextView
                     android:id="@+id/tv_title"
                     android:layout_width="match_parent"
@@ -55,7 +62,7 @@
                         android:id="@+id/tv_location"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Purwokerto"
+                        android:text="Location"
                         android:textSize="18sp"
                         android:textStyle="normal"
                         android:textColor="@color/white"

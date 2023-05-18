@@ -74,30 +74,35 @@
             android:layout_width="match_parent"
             android:layout_height="55dp"
             android:layout_margin="20dp"
-            android:text="SIGN UP"
+            android:text="Sign Up"
+            android:textAllCaps="true"
             android:textSize="18dp"
-            app:cornerRadius="10dp"
-            android:onClick="registerme">
+            app:cornerRadius="10dp">
         </Button>
 
-        <TextView
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="Sudah memiliki akun?"
-            android:layout_marginLeft="25dp">
-        </TextView>
+            android:paddingHorizontal="20dp"
+            android:orientation="horizontal">
 
-        <TextView
-            android:id="@+id/jump_login"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:text="Masuk Disini"
-            android:clickable="true"
-            android:onClick="jump_login"
-            android:layout_gravity="center"
-            android:layout_marginTop="-20dp"
-            android:layout_marginLeft="18dp">
-        </TextView>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sudah memiliki akun?">
+            </TextView>
+
+            <TextView
+                android:id="@+id/jump_login"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/red_200"
+                android:textStyle="bold"
+                android:layout_marginLeft="4dp"
+                android:text="Masuk Disini">
+            </TextView>
+
+        </LinearLayout>
 
     </LinearLayout>
 

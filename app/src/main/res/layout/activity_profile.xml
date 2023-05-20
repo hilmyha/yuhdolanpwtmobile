@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ProfileActivity"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/bg_rectangle_profile"
+            android:scaleType="centerCrop">
+        </ImageView>
+
+        <ImageView
+            android:id="@+id/back_profile"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_margin="24dp"
+            android:src="@drawable/baseline_arrow_back_ios_24">
+        </ImageView>
+
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:text="Edit Profile"
+            android:textSize="20dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="24dp"
+            android:textStyle="bold">
+        </TextView>
+
+        <TextView
+            android:id="@+id/save_profile"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:text="SAVE"
+            android:textSize="20dp"
+            android:layout_gravity="end"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:layout_marginTop="26dp">
+        </TextView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            app:cardCornerRadius="100dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="20dp">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/img_profile">
+            </ImageView>
+
+        </androidx.cardview.widget.CardView>
+
+    </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="24dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Username"
+            android:textSize="18dp"
+            android:layout_marginLeft="3dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="Usman Pamungkas"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:textSize="20dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Email"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textColor="@color/black"
+            android:text="20102198@ittelkom-pwt.ac.id"
+            android:inputType="textEmailAddress"
+            android:textAllCaps="false"
+            android:textSize="20dp">
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nomor Handphone"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="082227974000"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+
+        </EditText>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tanggal Lahir"
+            android:textSize="18dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="3dp">
+        </TextView>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:text="10 / 09 / 2002"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="20dp">
+        </EditText>
+
+    </LinearLayout>
+
+</LinearLayout>

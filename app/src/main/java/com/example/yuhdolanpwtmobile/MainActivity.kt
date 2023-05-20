@@ -12,33 +12,33 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.yuhdolanpwtmobile.Adapter.DestinasiAdapter
 import com.example.yuhdolanpwtmobile.Fragment.DestinationFragment
 import com.example.yuhdolanpwtmobile.Fragment.HomeFragment
+import com.example.yuhdolanpwtmobile.Fragment.ProfileFragment
+import com.example.yuhdolanpwtmobile.databinding.ActivityMainBinding
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding= ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
 
-        val homeFragment = HomeFragment()
-        val destinationFragment = DestinationFragment()
+        replaceFragment(HomeFragment())
 
-        val navbar = findViewById<BottomNavigationView>(R.id.navbar)
-
-        makeCurrentFragment(homeFragment)
-
-        navbar.setOnNavigationItemReselectedListener {
+        binding.navbar.setOnNavigationItemSelectedListener {
             when(it.itemId) {
-                R.id.nav_home -> makeCurrentFragment(homeFragment)
-                R.id.nav_destination -> makeCurrentFragment(destinationFragment)
+                R.id.nav_home -> replaceFragment(HomeFragment())
+                R.id.nav_destination -> replaceFragment(DestinationFragment())
+                R.id.nav_profile -> replaceFragment(ProfileFragment())
             }
+            true
         }
     }
 
-    private fun makeCurrentFragment(fragment: Fragment) {
-        supportFragmentManager.beginTransaction().apply {
-            replace(R.id.frame_navbar, fragment)
-            commit()
-        }
+    private fun replaceFragment(fragment: Fragment) {
+        val fragmentTransaction = supportFragmentManager.beginTransaction()
+        fragmentTransaction.replace(R.id.frame_navbar, fragment)
+        fragmentTransaction.commit()
     }
 }

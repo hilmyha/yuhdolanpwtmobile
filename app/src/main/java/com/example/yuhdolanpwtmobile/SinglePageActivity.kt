@@ -18,6 +18,12 @@ class SinglePageActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        val btnBooking = findViewById<Button>(R.id.book_btn)
+        btnBooking.setOnClickListener {
+            val intent = Intent(this, BookingActivity::class.java)
+            startActivity(intent)
+        }
+
         parallaxEffect()
 
     }

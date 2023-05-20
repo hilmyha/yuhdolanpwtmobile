@@ -5,6 +5,9 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.recyclerview.widget.LinearLayoutManager
+import androidx.recyclerview.widget.RecyclerView
+import com.example.yuhdolanpwtmobile.Adapter.ListDestinasiAdapter
 import com.example.yuhdolanpwtmobile.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -22,6 +25,9 @@ class DestinationFragment : Fragment() {
     private var param1: String? = null
     private var param2: String? = null
 
+    private lateinit var rvDestinasi: RecyclerView
+    private lateinit var adapter: ListDestinasiAdapter
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -36,6 +42,20 @@ class DestinationFragment : Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         return inflater.inflate(R.layout.fragment_destination, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        rvDestinasi = view.findViewById(R.id.rv_destination)
+        adapter = ListDestinasiAdapter()
+
+        listDestinasiView()
+    }
+
+    private fun listDestinasiView() {
+        rvDestinasi.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
+        rvDestinasi.adapter = adapter
     }
 
     companion object {

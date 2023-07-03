@@ -5,9 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.yuhdolanpwtmobile.Adapter.ListDestinasiAdapter
 import com.example.yuhdolanpwtmobile.R
 
 // TODO: Rename parameter arguments, choose names that match
@@ -17,16 +14,13 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [DestinationFragment.newInstance] factory method to
+ * Use the [FavoriteFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DestinationFragment : Fragment() {
+class FavoriteFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
-    private lateinit var rvDestinasi: RecyclerView
-    private lateinit var adapter: ListDestinasiAdapter
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -41,21 +35,7 @@ class DestinationFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_destination, container, false)
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-        rvDestinasi = view.findViewById(R.id.rv_destination)
-        adapter = ListDestinasiAdapter()
-
-        listDestinasiView()
-    }
-
-    private fun listDestinasiView() {
-        rvDestinasi.layoutManager = LinearLayoutManager(activity, LinearLayoutManager.VERTICAL, false)
-        rvDestinasi.adapter = adapter
+        return inflater.inflate(R.layout.fragment_favorite, container, false)
     }
 
     companion object {
@@ -65,12 +45,12 @@ class DestinationFragment : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment DestinationFragment.
+         * @return A new instance of fragment FavoriteFragment.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            DestinationFragment().apply {
+            FavoriteFragment().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)

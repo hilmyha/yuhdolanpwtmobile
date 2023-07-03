@@ -41,6 +41,15 @@
             android:layout_margin="12dp"
             tools:listitem="@layout/item_category_card"/>
 
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_article"
+            android:layout_marginTop="14dp"
+            android:layout_margin="12dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            tools:listitem="@layout/item_destinasi_card" />
+
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -53,15 +62,6 @@
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/rv_destination"
-            android:layout_marginTop="14dp"
-            android:layout_margin="12dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            tools:listitem="@layout/item_destinasi_card" />
-
-        <androidx.recyclerview.widget.RecyclerView
-            android:id="@+id/rv_article"
             android:layout_marginTop="14dp"
             android:layout_margin="12dp"
             android:layout_width="match_parent"

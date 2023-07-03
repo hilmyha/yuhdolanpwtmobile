@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <com.google.android.material.button.MaterialButton xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/book_btn"
-    style="@style/bookBtn"
-    android:text="Booking Now">
+    android:id="@+id/ulasan_btn"
+    style="@style/ulasBtn"
+    android:text="Tulis Ulasan">
 
 </com.google.android.material.button.MaterialButton>

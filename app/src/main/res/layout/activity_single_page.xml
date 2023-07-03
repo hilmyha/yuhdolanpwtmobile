@@ -28,12 +28,33 @@
                     android:scaleType="centerCrop"
                     android:foreground="@color/foreground" />
 
-                <ImageView
-                    android:id="@+id/back_home"
-                    android:layout_width="30dp"
-                    android:layout_height="30dp"
-                    android:layout_margin="24dp"
-                    android:src="@drawable/baseline_arrow_back_ios_24" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="top">
+
+                    <ImageView
+                        android:id="@+id/back_home"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginStart="24dp"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginEnd="24dp"
+                        android:layout_marginBottom="24dp"
+                        android:src="@drawable/baseline_arrow_back_ios_24" />
+
+                    <ImageView
+                        android:id="@+id/favorite"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_margin="24dp"
+                        android:layout_alignParentEnd="true"
+                        android:src="@drawable/baseline_favorite_border_24" />
+                </RelativeLayout>
+
+
+
+
 
                 <TextView
                     android:id="@+id/tv_title"
@@ -94,7 +115,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginHorizontal="24dp"
-                    android:text="Price"
+                    android:text="Harga"
                     android:textColor="@color/h2"
                     android:textSize="20sp"
                     android:textStyle="normal" />
@@ -117,15 +138,33 @@
                     android:textStyle="normal"
                     android:layout_marginTop="16dp" />
 
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rectangle"
+                    />
+
                 <TextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginHorizontal="24dp"
-                    android:textAlignment="center"
-                    android:text="Facilities"
+                    android:text="Fasilitas"
+                    android:textAlignment="textStart"
                     android:textSize="18sp"
                     android:textStyle="bold"
-                    android:layout_marginTop="16dp" />
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="4dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Fasilitas yang ada di destinasi ini"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="4dp"/>
                 <GridLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -162,11 +201,53 @@
                         </LinearLayout>
                     </androidx.cardview.widget.CardView>
 
+
+
                 </GridLayout>
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rectangle"
+                    />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Belum ada Ulasan"
+                    android:textAlignment="textStart"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="4dp"/>
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Berikan ulasan dan opini untuk membantu pengelola memberikan yang terbaik"
+                    android:textAlignment="textStart"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="4dp"/>
+
+                <include layout="@layout/ulas_btn" />
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginVertical="18dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/rectangle"
+                    />
+
             </LinearLayout>
 
 
-            <include layout="@layout/book_btn" />
+
 
         </LinearLayout>
 

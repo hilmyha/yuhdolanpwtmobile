@@ -1,20 +1,13 @@
 package com.example.yuhdolanpwtmobile
 
-import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
-import android.widget.Button
-import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import com.example.yuhdolanpwtmobile.Adapter.DestinasiAdapter
-import com.example.yuhdolanpwtmobile.Fragment.DestinationFragment
+import com.example.yuhdolanpwtmobile.Fragment.FavoriteFragment
 import com.example.yuhdolanpwtmobile.Fragment.HomeFragment
 import com.example.yuhdolanpwtmobile.Fragment.ProfileFragment
+import com.example.yuhdolanpwtmobile.Fragment.UlasanFragment
 import com.example.yuhdolanpwtmobile.databinding.ActivityMainBinding
-import com.google.android.material.bottomnavigation.BottomNavigationView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -29,8 +22,9 @@ class MainActivity : AppCompatActivity() {
         binding.navbar.setOnNavigationItemSelectedListener {
             when(it.itemId) {
                 R.id.nav_home -> replaceFragment(HomeFragment())
-                R.id.nav_destination -> replaceFragment(DestinationFragment())
                 R.id.nav_profile -> replaceFragment(ProfileFragment())
+                R.id.nav_favorite -> replaceFragment(FavoriteFragment())
+                R.id.nav_ulasan -> replaceFragment(UlasanFragment())
             }
             true
         }
